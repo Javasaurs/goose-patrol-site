@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risk – GoosePatrol (Team 1: Javasaurs)</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1><a href="../index.html">GoosePatrol</a></h1>
+    <p>Team 1: Javasaurs · ENG1 (COM00019I) · University of York</p>
+    <nav><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../requirements/">Requirements</a></li>
+      <li><a href="../architecture/">Architecture</a></li>
+      <li><a href="../planning/">Planning</a></li>
+      <li><a href="../risk/" aria-current="page">Risk</a></li>
+      <li><a href="../implementation/">Implementation</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section>
+    <h2>Risk assessment and mitigation (Risk1)</h2>
+    <p><a class="btn" href="../downloads/Risk1.pdf">Download Risk1.pdf</a></p>
+  </section>
+  <section>
+    <h2>Full risk register</h2>
+    <p class="muted">L = Likelihood, S = Severity (Low / Med / High). Reviewed at each weekly team meeting. Owners: A = [Name] (project manager), B = [Name] (lead developer), C = [Name] (architecture), D = [Name] (requirements), E = [Name] (documentation and website), F = [Name] (build and assets), G = [Name] (testing).</p>
+    <table>
+      <thead><tr><th>ID</th><th>Type</th><th>Description</th><th>L</th><th>S</th><th>Mitigation</th><th>Owner</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="id">R01</td><td>Project</td><td>A member is unavailable (illness, other deadlines), so their tasks stall.</td><td>High</td><td>Med</td><td>Each task has a backup person; work is pushed daily; tasks reassigned weekly.</td><td>A</td><td>Open</td></tr>
+        <tr><td class="id">R02</td><td>Project</td><td>Uneven workload or poor communication: work is overloaded, duplicated or missed.</td><td>Med</td><td>High</td><td>Tracker with owners and estimates; minutes record decisions; persistent imbalance raised early with module leaders.</td><td>A</td><td>Open</td></tr>
+        <tr><td class="id">R03</td><td>Project</td><td>Effort underestimated or clashes with other modules, so deliverables are rushed.</td><td>High</td><td>High</td><td>One-week buffer before the deadline; shall requirements built first so a reduced but working game can be submitted.</td><td>A</td><td>Open</td></tr>
+        <tr><td class="id">R04</td><td>Requirements</td><td>Brief misunderstood, or the stakeholder changes requirements late.</td><td>Med</td><td>High</td><td>Ambiguities put to the stakeholder and answers recorded; Req1 IDs trace each change to design and code.</td><td>D</td><td>Open</td></tr>
+        <tr><td class="id">R05</td><td>Requirements</td><td>Scope misjudged: unrequired features added (against KISS), or the Assessment 1 subset of Req1 misread.</td><td>Med</td><td>Med</td><td>Assessment 1 scope agreed with the stakeholder and marked per ID; new features must trace to a requirement.</td><td>D</td><td>Open</td></tr>
+        <tr><td class="id">R06</td><td>Technology</td><td>Little experience with LibGDX or Gradle slows implementation.</td><td>High</td><td>Med</td><td>Early technical spike; shared tutorials; less experienced members pair with experienced ones.</td><td>B</td><td>Open</td></tr>
+        <tr><td class="id">R07</td><td>Tools</td><td>Merge conflicts or a broken main branch lose or block work.</td><td>Med</td><td>Med</td><td>Feature branches, reviewed pull requests, small commits; bad merges reverted from Git history.</td><td>B</td><td>Open</td></tr>
+        <tr><td class="id">R08</td><td>Tools</td><td>Different OS or JDK setups mean code builds for some members only.</td><td>Med</td><td>Med</td><td>Java 17 set in the Gradle toolchain and wrapper; weekly build on a lab machine.</td><td>F</td><td>Open</td></tr>
+        <tr><td class="id">R09</td><td>Product</td><td>The JAR does not run on the marker&#x27;s machine (missing dependencies or assets).</td><td>Med</td><td>High</td><td>Gradle builds one JAR with all dependencies, tested on a clean lab machine before submission.</td><td>F</td><td>Open</td></tr>
+        <tr><td class="id">R10</td><td>Product</td><td>GameTimer, HUD, ItemManager and EventManager unfinished by 16 Nov, so UR_TIMER, UR_ITEMS and UR_EVENTS are unmet.</td><td>High</td><td>High</td><td>Timer, pause and time-out first, then one item and one event end to end; unfinished IDs listed in Impl1 (6b).</td><td>B</td><td>Open</td></tr>
+        <tr><td class="id">R11</td><td>Product</td><td>Bugs or poor performance break requirements.</td><td>Med</td><td>Med</td><td>Each feature play-tested against its IDs before merging; bugs logged as GitHub issues and fixed by priority.</td><td>G</td><td>Open</td></tr>
+        <tr><td class="id">R12</td><td>Product</td><td>Geese too strong or weak, so QR_DIFFICULTY (beatable within 2.5 min) is not met.</td><td>Med</td><td>Med</td><td>Bird speeds and spawn count set in one place; weekly playtest times recorded.</td><td>D</td><td>Open</td></tr>
+        <tr><td class="id">R13</td><td>Product</td><td>Map unfinished or changing (Collision layer not read), so the player walks through buildings and items or events must move.</td><td>Med</td><td>Med</td><td>Map changes via pull requests; collision fixed before placing items and events.</td><td>C</td><td>Open</td></tr>
+        <tr><td class="id">R14</td><td>Product</td><td>Code is hard to extend or unit-test, so other teams avoid it for Assessment 2.</td><td>Med</td><td>Med</td><td>Low-coupling design checked against the full brief; logic separated from drawing (Arch1 Section 6).</td><td>C</td><td>Open</td></tr>
+        <tr><td class="id">R15</td><td>Business</td><td>Documents and code become inconsistent (IDs, class names), losing marks.</td><td>Med</td><td>High</td><td>Req1 IDs and class names used in all deliverables and commits; consistency check before submission.</td><td>E</td><td>Open</td></tr>
+        <tr><td class="id">R16</td><td>Business</td><td>Assets or libraries have unsuitable licences or are not credited.</td><td>Low</td><td>Med</td><td>Only CC0 or permissive licences (MIT, Apache 2.0); each licence logged for Impl1 (6b).</td><td>F</td><td>Open</td></tr>
+        <tr><td class="id">R17</td><td>Business</td><td>Submission fails or breaks the rules (late, wrong zip, page limits, broken links).</td><td>Low</td><td>High</td><td>Checklist done by two members; submit early; named submitter and backup.</td><td>A</td><td>Open</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<footer>Team 1: Javasaurs · ENG1 Assessment 1 · Last updated: 16/11/2026</footer>
+</body>
+</html>

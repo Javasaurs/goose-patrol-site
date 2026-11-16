@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Implementation – GoosePatrol (Team 1: Javasaurs)</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1><a href="../index.html">GoosePatrol</a></h1>
+    <p>Team 1: Javasaurs · ENG1 (COM00019I) · University of York</p>
+    <nav><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../requirements/">Requirements</a></li>
+      <li><a href="../architecture/">Architecture</a></li>
+      <li><a href="../planning/">Planning</a></li>
+      <li><a href="../risk/">Risk</a></li>
+      <li><a href="../implementation/" aria-current="page">Implementation</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section>
+    <h2>Implementation (Impl1)</h2>
+    <p><a class="btn" href="../downloads/Impl1.pdf">Download Impl1.pdf</a></p>
+  </section>
+  <section>
+    <h2>Executable game</h2>
+    <p><a class="btn" href="../downloads/GoosePatrol.jar">Download GoosePatrol.jar</a> <span class="muted">Requires Java 17. Run with <code>java -jar GoosePatrol.jar</code>.</span></p>
+  </section>
+  <section>
+    <h2>Third-party libraries and licences</h2>
+    <table>
+      <thead><tr><th>Library / tool</th><th>Used for</th><th>Licence</th></tr></thead>
+      <tbody>
+        <tr><td>libGDX</td><td>Game framework (rendering, input, maps)</td><td>Apache 2.0</td></tr>
+        <tr><td>LWJGL3 backend</td><td>Desktop window and OpenGL</td><td>BSD 3-Clause</td></tr>
+        <tr><td>Ashley</td><td>Entity-component-system library (included in build)</td><td>Apache 2.0</td></tr>
+        <tr><td>gdx-liftoff</td><td>Project generator used to create the initial layout</td><td>Apache 2.0</td></tr>
+        <tr><td>Tiled</td><td>Map editor used to build york_campus.tmx</td><td>GPL-2.0 (editor only; maps we create are ours)</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Feature status</h2>
+    <p class="muted">Impl1.pdf is the authoritative list of features not fully implemented.</p>
+    <table>
+      <thead><tr><th>Requirement IDs</th><th>Feature</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="id">FR_PLAYER_MOVEMENT</td><td>Player movement (WASD / arrow keys)</td><td>Implemented</td></tr>
+        <tr><td class="id">UR_MAP, QR_MAP_VISUALS</td><td>Campus map</td><td>Partial – collision layer not read yet</td></tr>
+        <tr><td class="id">UR_GEESE, FR_GEESE_VARIETY</td><td>Ducks, geese and swans with different speeds</td><td>Implemented</td></tr>
+        <tr><td class="id">FR_GEESE_SPAWNING</td><td>Geese spawning</td><td>Partial – birds spawn at start only</td></tr>
+        <tr><td class="id">FR_PAUSE, UR_TIMER, FR_TIME_OUT, FR_DISPLAY_TIME</td><td>Pause and 5-minute timer</td><td>See Impl1.pdf</td></tr>
+        <tr><td class="id">UR_ITEMS, FR_PLAYER_USE_ITEM</td><td>Items</td><td>See Impl1.pdf</td></tr>
+        <tr><td class="id">UR_EVENTS, FR_EVENT_TRIGGERS</td><td>Hidden events</td><td>See Impl1.pdf</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<footer>Team 1: Javasaurs · ENG1 Assessment 1 · Last updated: 16/11/2026</footer>
+</body>
+</html>

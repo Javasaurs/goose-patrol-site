@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Requirements – GoosePatrol (Team 1: Javasaurs)</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1><a href="../index.html">GoosePatrol</a></h1>
+    <p>Team 1: Javasaurs · ENG1 (COM00019I) · University of York</p>
+    <nav><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../requirements/" aria-current="page">Requirements</a></li>
+      <li><a href="../architecture/">Architecture</a></li>
+      <li><a href="../planning/">Planning</a></li>
+      <li><a href="../risk/">Risk</a></li>
+      <li><a href="../implementation/">Implementation</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section>
+    <h2>Requirements (Req1)</h2>
+    <p><a class="btn" href="../downloads/Req1.pdf">Download Req1.pdf</a></p>
+  </section>
+  <section>
+    <h2>User requirements</h2>
+    <p class="muted">Priority: shall (essential), should (important), may (optional).</p>
+    <table>
+      <thead><tr><th>ID</th><th>Description</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="id">UR_PLAYER</td><td>The game allows the user to control a player character.</td><td>Shall</td></tr>
+        <tr><td class="id">UR_SCORE</td><td>The system should give the user a score at the end of the game.</td><td>Shall</td></tr>
+        <tr><td class="id">UR_MAP</td><td>The game should display a map of the university.</td><td>Shall</td></tr>
+        <tr><td class="id">UR_ITEMS</td><td>The game allows the user&#x27;s player character to use items.</td><td>Shall</td></tr>
+        <tr><td class="id">UR_EVENTS</td><td>The game should have hidden events.</td><td>Shall</td></tr>
+        <tr><td class="id">UR_TIMER</td><td>The game will time how long the player takes to beat the game.</td><td>Shall</td></tr>
+        <tr><td class="id">UR_GEESE</td><td>The game will feature geese that disrupt the player.</td><td>Shall</td></tr>
+        <tr><td class="id">UR_UX</td><td>The game will offer a pleasant user experience.</td><td>Should</td></tr>
+        <tr><td class="id">UR_TARGET_AUDIENCE</td><td>The game will be suitable for current undergraduate students.</td><td>Should</td></tr>
+        <tr><td class="id">UR_ACCESSIBILITY</td><td>The system should support a variety of users.</td><td>May</td></tr>
+        <tr><td class="id">UR_SOUND</td><td>The system will have sound effects and music.</td><td>May</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Functional requirements</h2>
+    <table>
+      <thead><tr><th>ID</th><th>Description</th><th>User requirement</th></tr></thead>
+      <tbody>
+        <tr><td class="id">FR_PLAYER_MOVEMENT</td><td>The system will allow the user to make the player character move.</td><td>UR_PLAYER</td></tr>
+        <tr><td class="id">FR_PLAYER_USE_ITEM</td><td>The system will allow the user to make the player use items.</td><td>UR_PLAYER</td></tr>
+        <tr><td class="id">FR_PAUSE</td><td>The system will allow the user to pause the game.</td><td>UR_UX</td></tr>
+        <tr><td class="id">FR_GEESE_SPAWNING</td><td>The game will frequently spawn geese.</td><td>UR_GEESE</td></tr>
+        <tr><td class="id">FR_GEESE_VARIETY</td><td>Make geese different sizes, strengths and speeds.</td><td>UR_GEESE</td></tr>
+        <tr><td class="id">FR_MUSIC</td><td>Music will play during the game.</td><td>UR_SOUND</td></tr>
+        <tr><td class="id">FR_GEESE_SFX</td><td>The geese will quack and make different sound effects.</td><td>UR_SOUND</td></tr>
+        <tr><td class="id">FR_ITEM_SFX</td><td>Different sound effects will play when the player uses an item.</td><td>UR_SOUND</td></tr>
+        <tr><td class="id">FR_EVENT_TRIGGERS</td><td>The game will trigger hidden events.</td><td>UR_EVENTS</td></tr>
+        <tr><td class="id">FR_TIME_OUT</td><td>The game will end if the 5 minute timer runs out.</td><td>UR_TIMER</td></tr>
+        <tr><td class="id">FR_DISPLAY_TIME</td><td>The game will continuously display the timer, and update as it changes.</td><td>UR_TIMER</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Quality requirements</h2>
+    <table>
+      <thead><tr><th>ID</th><th>Description</th><th>User requirement</th><th>Fit criteria</th></tr></thead>
+      <tbody>
+        <tr><td class="id">QR_COLOUR_BLINDNESS</td><td>The game will be colour-blind friendly.</td><td>UR_ACCESSIBILITY</td><td>All colours used come from a colour-blind friendly palette.</td></tr>
+        <tr><td class="id">QR_CONTROLS</td><td>The controls will be simple and easy to understand.</td><td>UR_UX</td><td>Intuitive buttons for different player actions.</td></tr>
+        <tr><td class="id">QR_SCORE_ITEMS</td><td>The player&#x27;s use of items should affect scoring.</td><td>UR_SCORE</td><td>Using items deducts score if used badly or improves it if used smartly.</td></tr>
+        <tr><td class="id">QR_SCORE_EVENTS</td><td>The player&#x27;s handling of hidden events should affect scoring.</td><td>UR_SCORE</td><td>All hidden events must alter the player&#x27;s score.</td></tr>
+        <tr><td class="id">QR_SCORE_TIME</td><td>How quickly the player beats the game should affect the score.</td><td>UR_SCORE</td><td>Reduce the player&#x27;s score by 1 every second.</td></tr>
+        <tr><td class="id">QR_MAP_VISUALS</td><td>The map should resemble qualities of the university.</td><td>UR_MAP</td><td>The map has at least 2 buildings, a lake and grass.</td></tr>
+        <tr><td class="id">QR_MAP_MOVES</td><td>The map should move with the player (either camera or map moves on screen).</td><td>UR_MAP</td><td>Camera moves with the player, and the player is centred on screen.</td></tr>
+        <tr><td class="id">QR_PLATFORM</td><td>The game should run on desktops and laptops.</td><td>UR_TARGET_AUDIENCE</td><td>The game is runnable on desktops and laptops.</td></tr>
+        <tr><td class="id">QR_DIFFICULTY</td><td>The game should be of medium difficulty.</td><td>UR_UX</td><td>Game is beatable within 2.5 minutes.</td></tr>
+        <tr><td class="id">QR_STYLE</td><td>The game should be top-down view.</td><td>UR_UX</td><td>Game is displayed from a top-down facing 2D camera.</td></tr>
+        <tr><td class="id">QR_EVENT_COUNT</td><td>The game should feature hidden events.</td><td>UR_EVENTS</td><td>At least 5 hidden events.</td></tr>
+        <tr><td class="id">QR_INITIAL_ITEM_COUNT</td><td>The game should feature initial inventory items.</td><td>UR_ITEMS</td><td>At least 5 initial inventory items.</td></tr>
+        <tr><td class="id">QR_PICKUP_ITEM_COUNT</td><td>The game should feature multiple different pickup items (found on the map).</td><td>UR_ITEMS</td><td>At least 5 pickup inventory items.</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<footer>Team 1: Javasaurs · ENG1 Assessment 1 · Last updated: 16/11/2026</footer>
+</body>
+</html>

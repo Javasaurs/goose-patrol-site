@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture – GoosePatrol (Team 1: Javasaurs)</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1><a href="../index.html">GoosePatrol</a></h1>
+    <p>Team 1: Javasaurs · ENG1 (COM00019I) · University of York</p>
+    <nav><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../requirements/">Requirements</a></li>
+      <li><a href="../architecture/" aria-current="page">Architecture</a></li>
+      <li><a href="../planning/">Planning</a></li>
+      <li><a href="../risk/">Risk</a></li>
+      <li><a href="../implementation/">Implementation</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section>
+    <h2>Architecture (Arch1)</h2>
+    <p><a class="btn" href="../downloads/Arch1.pdf">Download Arch1.pdf</a></p>
+  </section>
+  <section>
+    <h2>Design process and evolution</h2>
+    <p>Diagrams are written in PlantUML (UML 2.5) and versioned in Git. The architecture evolved in three versions:</p>
+    <ul>
+      <li><strong>v1 – template.</strong> gdx-liftoff generated the two-module layout (lwjgl3 + core): the Platform and Game layers.</li>
+      <li><strong>v2 – map and player.</strong> Added the Tiled campus map and PlayerController.</li>
+      <li><strong>v3 – geese (current).</strong> Added GooseController and the BaseGoose hierarchy (Duck, Goose, Swan).</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Interim diagrams and CRC cards</h2>
+    <!-- Add one <li> per file you upload into the architecture folder, e.g.
+         <li><a href="v1-component.png">v1 component diagram</a></li> -->
+    <ul>
+      <li>See Arch1.pdf, Figure 5, for the evolution of the architecture.</li>
+    </ul>
+  </section>
+</main>
+<footer>Team 1: Javasaurs · ENG1 Assessment 1 · Last updated: 16/11/2026</footer>
+</body>
+</html>
